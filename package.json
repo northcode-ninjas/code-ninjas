@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "mocha **/spec/",
+    "lint": "eslint ./",
     "posttest": "npm run lint",
     "precommit": "npm test",
     "dev:server": "nodemon server/index.js",
@@ -23,9 +24,11 @@
   "homepage": "https://github.com/northcode-ninjas/code-ninjas#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "chai": "^4.1.0",
     "cors": "^2.8.4",
     "express": "^4.15.3",
     "jest": "^20.0.4",
+    "mocha": "^3.4.2",
     "mongoose": "^4.11.3",
     "prop-types": "^15.5.10"
   },
