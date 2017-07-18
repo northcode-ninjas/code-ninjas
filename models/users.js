@@ -12,10 +12,6 @@ var UserSchema = new Schema({
     required: true,
     lowercase: true
   },
-  password: {
-      type: String,
-      required: true
-  },
   progress: {
       type: Number,
       required: true
