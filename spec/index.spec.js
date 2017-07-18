@@ -23,13 +23,13 @@ describe('API Routes', function () {
   });
 });
   describe('GET /api/', function () {
-    it('returns', function (done) {
+    it('responds with 200', function (done) {
       request(server)
         .get('/api/')
+        .expect(200)
         .end((err, res) => {
           if (err) done(err);
           else {
-            expect(res.statusCode).to.equal(200);
             expect(res.body).to.equal('All good');
             done();
           }
