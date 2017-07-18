@@ -1,27 +1,26 @@
 {
-  "name": "code-ninjas",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/spec/",
+    "test": "mocha spec/*.spec.js",
     "lint": "eslint ./",
     "posttest": "npm run lint",
     "precommit": "npm test",
-    "start": "nodemon server/index.js",
-    "seed": "node server/seed/seed.js",
-    "dev:front": "webpack-dev-server"
+    "start": "nodemon index.js",
+    "seed": "node seed/seed.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/northcode-ninjas/code-ninjas.git"
+    "url": "git+https://github.com/northcode-ninjas/server.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/northcode-ninjas/code-ninjas/issues"
+    "url": "https://github.com/northcode-ninjas/server/issues"
   },
-  "homepage": "https://github.com/northcode-ninjas/code-ninjas#readme",
+  "homepage": "https://github.com/northcode-ninjas/server#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
