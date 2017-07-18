@@ -1,27 +1,18 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
-
+const data = require('./data/user_data');
+const saveUser = require('./saveUser');
 const mongoose = require('mongoose');
-mongoose.Promise = Promise;
+const DB = 'mongodb://localhost/api/:username';
 
-const seedUsers = require('./users.seed');
-const users = require('./data/users');
+mongoose.connect(DB);
 
-const DB_URI = require('../config')[process.env.NODE_ENV].DB;
-
-mongoose.connect(DB_URI)
+saveUser(data)
   .then(() => {
-    return mongoose.connection.db.dropCollection('users');
+    console.log('Users seeded successfully in ' + DB);
   })
-  .then(() => {
-    console.log('Dropped users collection');
-    return seedUsers(users);
-  })
-  .then(results => {
-    console.log(`Saved ${results.length} users`)
-  })
-  .catch((err) => {
-    console.log(err);
+  .catch(err => {
+    console.log('Error seeding database', err);
   })
   .then(() => {
-    return mongoose.connection.close();
+    mongoose.connection.close();
   });
+  
