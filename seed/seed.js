@@ -17,7 +17,7 @@ mongoose.connect(DB_URI)
     return seedUsers(users);
   })
   .then(results => {
-    console.log(`Saved ${results.length} users`)
+    console.log(`Saved ${results.length} users`);
   })
   .catch((err) => {
     console.log(err);
