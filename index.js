@@ -15,9 +15,8 @@ mongoose.connect(DB, (err) => {
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.status(200).json('All good');
-});
+const apiRouter = require('./routes/api');
+app.use('/api', apiRouter);
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
