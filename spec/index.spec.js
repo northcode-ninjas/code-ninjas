@@ -36,3 +36,23 @@ describe('API Routes', function () {
         });
     });
   });
+ 
+
+  describe('GET /api/users/:username', function () {
+    it('should return the requested user', function (done) {
+      request(server)
+      
+      .get('/api/users/loneninja1')
+      .end((err, res) => {
+        if (err) done(err);
+        else {
+          console.log('*****',res.body.welcomeUser);
+        expect(res.statusCode).to.equal(200);
+        expect(res.body.welcomeUser).to.be.an('array');
+        expect(res.body.welcomeUser.length).to.equal(1);
+        expect(res.body.welcomeUser[0].username).to.equal('loneninja1');
+        done();
+        }
+      });
+    });
+  });

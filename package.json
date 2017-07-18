@@ -10,7 +10,7 @@
     "precommit": "npm test",
     "start": "nodemon index.js",
     "seed:dev": "node seed/seed.js",
-    "seed:test": "NODE_ENV=test seed/seed.js"
+    "seed:test": "NODE_ENV=test node seed/seed.js"
   },
   "repository": {
     "type": "git",
