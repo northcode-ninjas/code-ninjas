@@ -15,6 +15,11 @@ var UserSchema = new Schema({
   progress: {
       type: Number,
       required: true
+  },
+  email: {
+    type: String,
+    unique: true,
+    required: true
   }
 });
 
