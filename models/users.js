@@ -12,13 +12,17 @@ var UserSchema = new Schema({
     required: true,
     lowercase: true
   },
-  progress: {
-      type: Number,
-      required: true
-  },
   email: {
     type: String,
     unique: true,
+    required: true
+  },
+  level: {
+    type: String,
+    required: true
+  },
+  questionNumber: {
+    type: Number,
     required: true
   }
 });
