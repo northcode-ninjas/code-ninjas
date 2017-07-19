@@ -46,11 +46,27 @@ describe('API Routes', function () {
       .end((err, res) => {
         if (err) done(err);
         else {
-          console.log('*****',res.body.welcomeUser);
         expect(res.statusCode).to.equal(200);
         expect(res.body.welcomeUser).to.be.an('array');
         expect(res.body.welcomeUser.length).to.equal(1);
         expect(res.body.welcomeUser[0].username).to.equal('loneninja1');
+        done();
+        }
+      });
+    });
+  });
+describe('GET /api/questions/:level', function () {
+    it('should return the requested questions', function (done) {
+      request(server)
+      
+      .get('/api/questions/academy')
+      .end((err, res) => {
+        if (err) done(err);
+        else {
+        expect(res.statusCode).to.equal(200);
+        expect(res.body.generateQuestion).to.be.an('array');
+        expect(res.body.generateQuestion.length).to.equal(5);
+        expect(res.body.generateQuestion[0].title).to.equal('What\'s Data?');
         done();
         }
       });
