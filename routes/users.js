@@ -1,5 +1,15 @@
 const router = require('express').Router();
 const models = require('../models/models');
+const users = require('../models/users');
+
+router.get('/', (req, res, next) => {
+    users.find()
+    .then((users) => {
+        if (users.length < 1) return res.status(202).json({message: 'No users found'});
+        return res.status(200).json({users});
+    })
+    .catch(next);
+});
 
 router.get('/:username', (req, res, next) => {
     const {username} = req.params;
