@@ -11,10 +11,10 @@ const saveTestData = require('../seed/users.seed');
 describe('API Routes', function () {
   beforeEach(done => {
     mongoose.connection.dropDatabase()
-    .then(() => saveTestData(data)
-      .then(() => done())
-      .catch(err => done(err))
-    );
+      .then(() => saveTestData(data)
+        .then(() => done())
+        .catch(err => done(err))
+      );
   });
 
   after(done => {
@@ -22,53 +22,69 @@ describe('API Routes', function () {
     done();
   });
 });
-  describe('GET /api/', function () {
-    it('responds with 200', function (done) {
-      request(server)
-        .get('/api/')
-        .expect(200)
-        .end((err, res) => {
-          if (err) done(err);
-          else {
-            expect(res.body).to.equal('All good');
-            done();
-          }
-        });
-    });
+describe('GET /api/', function () {
+  it('responds with 200', function (done) {
+    request(server)
+      .get('/api/')
+      .expect(200)
+      .end((err, res) => {
+        if (err) done(err);
+        else {
+          expect(res.body).to.equal('All good');
+          done();
+        }
+      });
   });
- 
+});
 
-  describe('GET /api/users/:username', function () {
-    it('should return the requested user', function (done) {
-      request(server)
-      
+describe('GET /api/users', function () {
+  it('responds with 200', function (done) {
+    request(server)
+      .get('/api/users')
+      .expect(200)
+      .end((err, res) => {
+        if (err) done(err);
+        else {
+          expect(res.statusCode).to.equal(200);
+          expect(res.body.users).to.be.an('array');
+          expect(res.body.users.length).to.equal(3);
+          done();
+        }
+      });
+  });
+});
+
+describe('GET /api/users/:username', function () {
+  it('should return the requested user', function (done) {
+    request(server)
+
       .get('/api/users/loneninja1')
       .end((err, res) => {
         if (err) done(err);
         else {
-        expect(res.statusCode).to.equal(200);
-        expect(res.body.welcomeUser).to.be.an('array');
-        expect(res.body.welcomeUser.length).to.equal(1);
-        expect(res.body.welcomeUser[0].username).to.equal('loneninja1');
-        done();
+          expect(res.statusCode).to.equal(200);
+          expect(res.body.welcomeUser).to.be.an('array');
+          expect(res.body.welcomeUser.length).to.equal(1);
+          expect(res.body.welcomeUser[0].username).to.equal('loneninja1');
+          done();
         }
       });
-    });
   });
+});
 describe('GET /api/questions/:level', function () {
-    it('should return the requested questions', function (done) {
-      request(server)
-      
+  it('should return the requested questions', function (done) {
+    request(server)
+
       .get('/api/questions/academy')
       .end((err, res) => {
         if (err) done(err);
         else {
-        expect(res.statusCode).to.equal(200);
-        expect(res.body.generateQuestion).to.be.an('array');
-        expect(res.body.generateQuestion.length).to.equal(5);
-        expect(res.body.generateQuestion[0].title).to.equal('What\'s Data?');
-        done();
+          expect(res.statusCode).to.equal(200);
+          expect(res.body.generateQuestion).to.be.an('array');
+          expect(res.body.generateQuestion.length).to.equal(5);
+          expect(res.body.generateQuestion[0].title).to.equal('What\'s Data?');
+          done();
         }
       });
-    });
   });
+});
