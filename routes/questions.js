@@ -2,7 +2,6 @@ const router = require('express').Router();
 const models = require('../models/models');
 
 
-
  router.get('/:question', (req, res, next) => {
     const {question} = req.params;
     return models.Questions.find({level: question})
