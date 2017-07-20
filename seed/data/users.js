@@ -6,8 +6,7 @@ const users = range(3).map((num) => {
         username: `loneNinja${num}`,
         email: `loneNinja${num}@gmail.com`,
         avatar_url: faker.internet.avatar(),
-        level: 'academy', 
-        questionNumber: 1
+        level: 1
     };
 });
 
