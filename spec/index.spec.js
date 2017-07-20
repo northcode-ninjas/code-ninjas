@@ -88,3 +88,15 @@ describe('GET /api/questions/:level', function () {
       });
   });
 });
+describe('PUT /api/users/:username', function () {
+  it('should increase the users level', function (done) {
+    request(server)
+    .put('/api/users/loneninja2/level-up')
+    .end((err, res) => {
+      if (err) return done(err);
+      expect(res.status).to.equal(202);
+      expect(res.body.user.level).to.equal(2);
+      done();
+    });
+  });
+});
