@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/users', usersRouter);
-router.post('/users', updateUser)
+router.post('/users', updateUser);
 
 router.use('/questions', questionsRouter);
 

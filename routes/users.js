@@ -36,9 +36,7 @@ router.put('/:username/level-up', (req, res, next) => {
             return res.status(202).json({user});
         })
         .catch(next);
-})
-   
-
+});
 
 
 module.exports = router;
