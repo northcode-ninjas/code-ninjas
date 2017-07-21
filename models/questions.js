@@ -8,7 +8,7 @@ let QuestionSchema = new Schema({
     question: String,
     answers: [],
     correct: String,
-    level: String,
+    level: Number,
     questionNumber : Number
 });
 module.exports = mongoose.model('questions', QuestionSchema);
