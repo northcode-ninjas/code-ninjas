@@ -150,17 +150,6 @@ module.exports = [
         level: 'chunnin',
         questionNumber: 5
     },
-
-
-
-
-
-
-
-
-
-
-
     {
         title: 'If and Else',
         background: 'With JavaScript we can chose to do one thing if something happens, and something else if it doesn\'t using if and else statements',
