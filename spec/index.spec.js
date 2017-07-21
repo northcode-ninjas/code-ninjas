@@ -95,7 +95,7 @@ describe('PUT /api/users/:username', function () {
     .end((err, res) => {
       if (err) return done(err);
       expect(res.status).to.equal(202);
-      expect(res.body.user.level).to.equal(2);
+      expect(res.body.user.level).to.equal(1);
       done();
     });
   });
