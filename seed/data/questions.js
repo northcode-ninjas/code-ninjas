@@ -85,8 +85,8 @@ module.exports = [
         background: 'We can use JS to add, subtract, multiply and divide numbers. We use + to add, - to subtract, * to multiply, and / to divide.',
         example: 'let answer = 22 - 12 would give an answer of 10. let answer2 = 16 + 18 would give answer2 a value of 34. let answer3 = 5 * 4 would give answer3 a value of 20. let answer4 = 26 / 10 would give answer4 a value of 2.6',
         question: 'Which one would make the answer 18?',
-        answers: ['"let answer = 28 + 14"', '"let answer = 33 - 25"', '"let answer = 9 * 2"', '"let answer = 20 / 5"'],
-        correct: '"let answer = 9 * 2"',
+        answers: ['let answer = 28 + 14', 'let answer = 33 - 25', 'let answer = 9 * 2', 'let answer = 20 / 5'],
+        correct: 'let answer = 9 * 2',
         level: 'gennin',
         questionNumber: 4
     },
@@ -95,8 +95,8 @@ module.exports = [
         background: 'We have already learnt that we can use JS to do Maths for us, but did you know that it can even create random numbers',
         example: 'If you wanted a variable to create a random number we could write let answer = Math.random()',
         question: 'Which statement would make the enemy choose a random number?',
-        answers: ['"let enemyChoice = random()"', '"let enemyChoice = random(number)"', '"let random = enemyChoice"', '"let enemyChoice = Math.random()"'],
-        correct: '"let enemyChoice = Math.random()"',
+        answers: ['let enemyChoice = random()', 'let enemyChoice = random(number)', 'let random = enemyChoice', 'let enemyChoice = Math.random()'],
+        correct: 'let enemyChoice = Math.random()',
         level: 'gennin',
         questionNumber: 5
     },
@@ -105,8 +105,8 @@ module.exports = [
         background: 'We can discover whether a value is less than another using Javascript operators.',
         example: 'if there were less than 3 nunchucks, we could write it as nunchucks < 3',
         question: 'Which statement would show that there are less than 10 stars?',
-        answers: ['"let stars = Math.random()"', '"stars > 10"', '"stars = 10"', '"stars < 10"'],
-        correct: '"stars < 10"',
+        answers: ['let stars = Math.random()', 'stars > 10', 'stars = 10', 'stars < 10'],
+        correct: 'stars < 10',
         level: 'chunnin',
         questionNumber: 1
     },
@@ -115,8 +115,8 @@ module.exports = [
         background: 'We can also discover whether a value is greater than another with the greater than operator.',
         example: 'if there were more than 7 sensi, we could write it as sensi > 7',
         question: 'Which statement would show that there are more than 7 shuriken?',
-        answers: ['"let shuriken = 2 > 5"', '"shuriken > 10"', '"shuriken > 7"', '"shuriken = 8"'],
-        correct: '"shuriken > 7"',
+        answers: ['let shuriken = 2 > 5', 'shuriken > 10', 'shuriken > 7', 'shuriken = 8'],
+        correct: 'shuriken > 7',
         level: 'chunnin',
         questionNumber: 2
     },
@@ -151,14 +151,35 @@ module.exports = [
         questionNumber: 5
     },
     {
-        title: 'If and Else',
-        background: 'With JavaScript we can chose to do one thing if something happens, and something else if it doesn\'t using if and else statements',
-        example: 'if(enemyChoice < 3) { enemyChoice = "Nunchucks" } else {enemyChoice = "Shuriken"}',
-        question: 'Which statement would make the enemy choose a random number?',
-        answers: ['"let enemyChoice = random()"', '"let enemyChoice = random(number)"', '"let random = enemyChoice"', '"let enemyChoice = Math.random()"'],
-        correct: '"let enemyChoice = Math.random()"',
-        level: 'chunnin',
+        title: 'If Statments',
+        background: 'With JavaScript we can choose to do something if a condition is met using an if statement',
+        example: 'if (enemyChoice < 3) { enemyChoice = nunchucks }',
+        question: 'Which statement would make the enemy choose a star when they have a value of less than 10?',
+        answers: ['if (enemyChoice > 10) { enemyChoice = star }', 'if (enemyChoice < 10) { enemyChoice = nunchucks }', 'if (enemyChoice < 20) { enemyChoice = star }', 'if (enemyChoice < 10) { enemyChoice = star }'],
+        correct: 'if (enemyChoice < 10) { enemyChoice = star }',
+        level: 'jounin',
+        questionNumber: 1
+    },
+    {
+        title: 'Else Statments',
+        background: 'With else statments we can choose what to do when the if condition isn\'t met',
+        example: 'if (enemyChoice < 3) { enemyChoice = nunchucks } else { enemyChoice = origami }',
+        question: 'Which statement would make the enemy choose a shuriken when they have a value of 16?',
+        answers: ['if (enemyChoice < 3) { enemyChoice = shuriken } else { enemyChoice = origami }', 'if (enemyChoice > 9) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 
+                'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 'if (enemyChoice <= 15) { enemyChoice = shuriken } else { enemyChoice = origami }'],
+        correct: 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }',
+        level: 'jounin',
         questionNumber: 2
     },
-    
+    {
+        title: 'Else Statments',
+        background: 'With else statments we can choose what to do when the if condition isn\'t met',
+        example: 'if (enemyChoice < 3) { enemyChoice = nunchucks } else { enemyChoice = origami }',
+        question: 'Which statement would make the enemy choose a shuriken when they have a value of 16?',
+        answers: ['if (enemyChoice < 3) { enemyChoice = shuriken } else { enemyChoice = origami }', 'if (enemyChoice > 9) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 
+                'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 'if (enemyChoice <= 15) { enemyChoice = shuriken } else { enemyChoice = origami }'],
+        correct: 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }',
+        level: 'jounin',
+        questionNumber: 3
+    },
 ];
