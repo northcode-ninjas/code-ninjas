@@ -14,11 +14,11 @@ router.get('/', (req, res, next) => {
 router.get('/:username', (req, res, next) => {
     const { username } = req.params;
     return Users.find({ username })
-        .then((welcomeUser) => {
-            if (welcomeUser.length < 1) {
+        .then((user) => {
+            if (user.length < 1) {
                 return next({ status: 404, message: 'I do not recognise you young Ninja, reveal yourself to me again' });
             }
-            else return res.status(200).json({ welcomeUser });
+            else return res.status(200).json({ user });
         })
         .catch((err) => {
             console.log(err);

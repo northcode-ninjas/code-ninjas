@@ -63,9 +63,9 @@ describe('GET /api/users/:username', function () {
         if (err) done(err);
         else {
           expect(res.statusCode).to.equal(200);
-          expect(res.body.welcomeUser).to.be.an('array');
-          expect(res.body.welcomeUser.length).to.equal(1);
-          expect(res.body.welcomeUser[0].username).to.equal('loneninja1');
+          expect(res.body.user).to.be.an('array');
+          expect(res.body.user.length).to.equal(1);
+          expect(res.body.user[0].username).to.equal('loneninja1');
           done();
         }
       });
