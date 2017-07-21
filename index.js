@@ -3,7 +3,9 @@ if (!process.env.NODE_ENV) process.env.NODE_ENV = 'dev';
 const express = require ('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 const app = express();
+const jsonParser = require('body-parser').json;
 
 const PORT = process.env.PORT || 3000;
 const DB = require('./config')[process.env.NODE_ENV].DB;
@@ -13,11 +15,11 @@ mongoose.connect(DB, (err) => {
     else console.log(`Connected to ${DB}`);
 });
 
+app.use(jsonParser());
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.status(200).json('All good');
-});
+const apiRouter = require('./routes/api');
+app.use('/api', apiRouter);
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);

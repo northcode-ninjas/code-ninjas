@@ -1,18 +1,39 @@
-const data = require('./data/user_data');
-const saveUser = require('./saveUser');
+process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
+
 const mongoose = require('mongoose');
-const DB = 'mongodb://localhost/api/:username';
+mongoose.Promise = Promise;
 
-mongoose.connect(DB);
+const seedUsers = require('./users.seed');
+const seedQuestions = require('./questions.seed');
+const users = require('./data/users');
+const questionSets = require('./data/questions');
 
-saveUser(data)
+const DB_URI = require('../config')[process.env.NODE_ENV].DB;
+
+mongoose.connect(DB_URI)
   .then(() => {
-    console.log('Users seeded successfully in ' + DB);
-  })
-  .catch(err => {
-    console.log('Error seeding database', err);
+    return mongoose.connection.db.dropCollection('users');
   })
   .then(() => {
-    mongoose.connection.close();
+    console.log('Dropped users collection');
+    return seedUsers(users);
+  })
+  .then(results => {
+    return console.log(`Saved ${results.length} users`);
+  })
+  .then(() => {
+    return mongoose.connection.db.dropCollection('questions');
+  })
+  .then(() => {
+    console.log('Dropped questions collection');
+    return seedQuestions(questionSets);
+  })
+  .then(results => {
+    console.log(`Saved ${results.length} questions`);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .then(() => {
+    return mongoose.connection.close();
   });
-  
