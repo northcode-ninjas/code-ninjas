@@ -82,7 +82,7 @@ describe('GET /api/questions/:level', function () {
           expect(res.statusCode).to.equal(200);
           expect(res.body.generateQuestion).to.be.an('array');
           expect(res.body.generateQuestion.length).to.equal(5);
-          expect(res.body.generateQuestion[0].title).to.equal('What\'s Data?');
+          expect(res.body.generateQuestion[0].title).to.equal('What\'s A String?');
           done();
         }
       });
