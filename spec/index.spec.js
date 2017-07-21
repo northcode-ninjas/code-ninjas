@@ -71,7 +71,7 @@ describe('GET /api/users/:username', function () {
       });
   });
 });
-describe('GET /api/questions/:level', function () {
+xdescribe('GET /api/questions/:level', function () {
   it('should return the requested questions', function (done) {
     request(server)
 

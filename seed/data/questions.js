@@ -6,7 +6,7 @@ module.exports = [
         question: 'Find the string',
         answers: ['"Ninjas"', 34, true, 'name'],
         correct: '"Ninjas"',
-        level: 'academy',
+        level: 1,
         questionNumber: 1
     },
     {
@@ -16,7 +16,7 @@ module.exports = [
         question: 'Choose the number',
         answers: ['"Ninjas"', 34, true, 'name'],
         correct: 34,
-        level: 'academy',
+        level: 1,
         questionNumber: 2
     },
     {
@@ -26,7 +26,7 @@ module.exports = [
         question: 'Choose the boolean',
         answers: ['"Ninjas"', 34, true, 'name'],
         correct: true,
-        level: 'academy',
+        level: 1,
         questionNumber: 3
         
     },
@@ -37,7 +37,7 @@ module.exports = [
         question: 'How would you comment a single line?',
         answers: ['// karate chop', '/* high kick */', '/ dojo', '/ Kung Fu/'],
         correct: '// karate chop',
-        level: 'academy',
+        level: 1,
         questionNumber: 4
     },
     {
@@ -47,7 +47,7 @@ module.exports = [
         question: 'Which of the following is camelCase',
         answers: ['Shadowhunter', 'ShadowWarrior', 'nightWarrior', 'mastersamurai'],
         correct: '"nightWarrior"',
-        level: 'academy',
+        level: 1,
         questionNumber: 5
     },
     {
@@ -57,7 +57,7 @@ module.exports = [
         question: 'How would you declare a variable called samurai?',
         answers: ['let samurai', 'let = samurai', 'let pet', 'let horse'],
         correct: 'let samurai',
-        level: 'genin',
+        level: 2,
         questionNumber: 1
     },
     {
@@ -67,7 +67,7 @@ module.exports = [
         question: 'Select the samurai variable that has a value of 3',
         answers: ['let samurai = 9', 'let monkeys = 3', 'let samurai = 3', '3 = let samurai'],
         correct: 'let samurai = 3',
-        level: 'gennin',
+        level: 2,
         questionNumber: 2
     },
     {
@@ -77,7 +77,7 @@ module.exports = [
         question: 'Select the code to prompt the ninja to select a weapon',
         answers: ['let ninjaChoice = prompt("Do you choose Nunchucks, Shuriken or Origami?")','let prompt = ("Do you choose Nunchucks, Shuriken or Origami?")','let ninjaChoice = Nunchucks, Shuriken or Origami','ninjaChoice = prom("Do you choose Nunchucks, Shuriken or Origami?")'],
         correct: 'let ninjaChoice = prompt("Do you choose Nunchucks, Shuriken or Origami?")',
-        level: 'gennin',
+        level: 2,
         questionNumber: 3
     },
     {
@@ -87,7 +87,7 @@ module.exports = [
         question: 'Which one would make the answer 18?',
         answers: ['let answer = 28 + 14', 'let answer = 33 - 25', 'let answer = 9 * 2', 'let answer = 20 / 5'],
         correct: 'let answer = 9 * 2',
-        level: 'gennin',
+        level: 2,
         questionNumber: 4
     },
     {
@@ -97,7 +97,7 @@ module.exports = [
         question: 'Which statement would make the enemy choose a random number?',
         answers: ['let enemyChoice = random()', 'let enemyChoice = random(number)', 'let random = enemyChoice', 'let enemyChoice = Math.random()'],
         correct: 'let enemyChoice = Math.random()',
-        level: 'gennin',
+        level: 2,
         questionNumber: 5
     },
     {
@@ -107,7 +107,7 @@ module.exports = [
         question: 'Which statement would show that there are less than 10 stars?',
         answers: ['let stars = Math.random()', 'stars > 10', 'stars = 10', 'stars < 10'],
         correct: 'stars < 10',
-        level: 'chunnin',
+        level: 3,
         questionNumber: 1
     },
     {
@@ -117,7 +117,7 @@ module.exports = [
         question: 'Which statement would show that there are more than 7 shuriken?',
         answers: ['let shuriken = 2 > 5', 'shuriken > 10', 'shuriken > 7', 'shuriken = 8'],
         correct: 'shuriken > 7',
-        level: 'chunnin',
+        level: 3,
         questionNumber: 2
     },
     {
@@ -127,7 +127,7 @@ module.exports = [
         question: 'Select the answer that shows the 20 is less than or equal to 10?',
         answers: ['20 <= 10', '10 < 20', '10 <= 20', '20 > 10'],
         correct: '10 <= 20',
-        level: 'chunnin',
+        level: 3,
         questionNumber: 3
     },
     {
@@ -137,7 +137,7 @@ module.exports = [
         question: 'Which statement show that 7 is equal to 7',
         answers: ['7 equals 7', '7 === 7', '7 = 7', '7 === \'7\''],
         correct: '7 === 7',
-        level: 'chunnin',
+        level: 3,
         questionNumber: 4
     },
     {
@@ -147,7 +147,7 @@ module.exports = [
         question: 'Which one shows that ninjas or sensi equal 20',
         answers: ['(ninjas === 20 && sensi === 20)','(ninjas === 25 || sensi === 20)', '(ninjas === 20 || sensi === 20)', '(ninjas === 20 || sensi === 25)'],
         correct: '(ninjas === 20 || sensi === 20)',
-        level: 'chunnin',
+        level: 3,
         questionNumber: 5
     },
     {
@@ -157,7 +157,7 @@ module.exports = [
         question: 'Which statement would make the enemy choose a star when they have a value of less than 10?',
         answers: ['if (enemyChoice > 10) { enemyChoice = star }', 'if (enemyChoice < 10) { enemyChoice = nunchucks }', 'if (enemyChoice < 20) { enemyChoice = star }', 'if (enemyChoice < 10) { enemyChoice = star }'],
         correct: 'if (enemyChoice < 10) { enemyChoice = star }',
-        level: 'jounin',
+        level: 4,
         questionNumber: 1
     },
     {
@@ -168,7 +168,7 @@ module.exports = [
         answers: ['if (enemyChoice < 3) { enemyChoice = shuriken } else { enemyChoice = origami }', 'if (enemyChoice > 9) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 
                 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 'if (enemyChoice <= 15) { enemyChoice = shuriken } else { enemyChoice = origami }'],
         correct: 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }',
-        level: 'jounin',
+        level: 4,
         questionNumber: 2
     },
     {
@@ -179,7 +179,7 @@ module.exports = [
         answers: ['if (enemyChoice < 3) { enemyChoice = shuriken } else { enemyChoice = origami }', 'if (enemyChoice > 9) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 
                 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 'if (enemyChoice <= 15) { enemyChoice = shuriken } else { enemyChoice = origami }'],
         correct: 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }',
-        level: 'jounin',
+        level: 4,
         questionNumber: 3
     },
 ];
