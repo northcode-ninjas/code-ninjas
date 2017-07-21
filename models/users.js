@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
+let UserSchema = new Schema({
   username: {
     type: String,
     unique: true,
@@ -12,13 +12,14 @@ var UserSchema = new Schema({
     required: true,
     lowercase: true
   },
-  password: {
-      type: String,
-      required: true
+  email: {
+    type: String,
+    unique: true,
+    required: true
   },
-  progress: {
-      type: Number,
-      required: true
+  level: {
+    type: Number,
+    required: true
   }
 });
 
