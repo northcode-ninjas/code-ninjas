@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/:username', (req, res, next) => {
     const { username } = req.params;
-    return Users.find({ username })
+    return Users.findOne({ username })
         .then((user) => {
             if (user.length < 1) {
                 return next({ status: 404, message: 'I do not recognise you young Ninja, reveal yourself to me again' });
