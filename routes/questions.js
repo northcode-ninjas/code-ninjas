@@ -1,15 +1,28 @@
 const router = require('express').Router();
-const models = require('../models/models');
+const {Questions} = require('../models/models');
+
+router.get('/:level', (req, res, next) => {
+    const level = req.params;
+    // console.log(req.params)
+    Questions.find(level)
+    .then((levels) => {
+        levels.map((level) => {
+            return level.questionNumber;
+        });
+        return res.status(200).json({levels});
+    })
+    .catch(next);
+});
 
 
- router.get('/:question', (req, res, next) => {
-    const {question} = req.params;
-    return models.Questions.find({level: question})
-    .then((generateQuestion) => {
-        if (generateQuestion.length < 1) {
+ router.get('/:level/:question', (req, res, next) => {
+    const {level, question} = req.params;
+    Questions.find({level: level, questionNumber:question})
+    .then((questionNumber) => {
+        if (questionNumber.length < 1) {
             return next({ status: 404, message: 'I do not have a question here'});
         }
-        else return res.status(200).json({generateQuestion});
+        else return res.status(200).json({questionNumber});
     })
     .catch((err) => {
         console.log(err);

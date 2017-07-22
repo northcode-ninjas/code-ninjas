@@ -16,12 +16,12 @@ describe('API Routes', function () {
         .catch(err => done(err))
       );
   });
-
   after(done => {
     mongoose.connection.close();
     done();
   });
 });
+
 describe('GET /api/', function () {
   it('responds with 200', function (done) {
     request(server)
@@ -71,18 +71,35 @@ describe('GET /api/users/:username', function () {
       });
   });
 });
-xdescribe('GET /api/questions/:level', function () {
+
+describe('GET /api/levels/:level', function () {
+  it('should return all the questions for a given level', function (done) {
+    request(server)
+    .get('/api/levels/1')
+    .end((err, res) => {
+      if (err) done(err);
+      else {
+        expect(res.statusCode).to.equal(200);
+        expect(res.body.levels).to.be.an('array');
+        expect(res.body.levels.length).to.equal(5);
+        done();
+      }
+    });
+  });
+});
+
+describe('GET /api/levels/:level/:question', function () {
   it('should return the requested questions', function (done) {
     request(server)
-
-      .get('/api/questions/academy')
+      .get('/api/levels/1/1')
       .end((err, res) => {
+        console.log(res.body);
         if (err) done(err);
         else {
           expect(res.statusCode).to.equal(200);
-          expect(res.body.generateQuestion).to.be.an('array');
-          expect(res.body.generateQuestion.length).to.equal(5);
-          expect(res.body.generateQuestion[0].title).to.equal('What\'s A String?');
+          expect(res.body.questionNumber).to.be.an('array');
+          expect(res.body.questionNumber.length).to.equal(1);
+          expect(res.body.questionNumber[0].title).to.equal('What\'s A String?');
           done();
         }
       });

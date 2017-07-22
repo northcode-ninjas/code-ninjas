@@ -10,6 +10,6 @@ router.get('/', (req, res) => {
 router.use('/users', usersRouter);
 router.put('/users', updateUser);
 
-router.use('/questions', questionsRouter);
+router.use('/levels', questionsRouter);
 
 module.exports = router;
