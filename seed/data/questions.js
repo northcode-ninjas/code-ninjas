@@ -226,4 +226,34 @@ module.exports = [
         level: 4,
         questionNumber: 1
     },
+    {
+        title: 'Changing Data with Array Indexes',
+        background: 'So now that you know that we start counting from 0, we can use this to change data in our arrays',
+        example: 'let myInfo = [1, 2, 3, 4, 5]. If we wanted to change 1 to 21, we would write myInfo[0] = 21, myInfo would now equal [21, 2, 3, 4, 5].',
+        question: 'let training = ["camouflage yourself", "practice jumping", "learn sparring", "eat healthily"] How would you change the word "eat healthily" to "climb trees"?',
+        answers: ['training[0] = "climb trees", training[1] = "climb trees", training[2] = "climb trees", training[3] = "climb trees"'],
+        correct: 'training[3] = "climb trees"',
+        level: 4,
+        questionNumber: 2
+    },
+    {
+        title: 'Array Length',
+        background: 'We can see how many items there are inside an array by using .length',
+        example: 'let myArray = ["stars", 4, "nunchucks", false]. To see how long the myArray array is we can use myArray.length which would give us 4.',
+        question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you find the length of an array?',
+        answers: ['ninjaslength, let ninjas.length, ninjas.length, length.ninjas'],
+        correct: 'ninjas.length',
+        level: 4,
+        questionNumber: 3
+    },
+    {
+        title: 'Adding to an array',
+        background: 'We can add items to the end of an array by using a method called push(). Whatever we want to add to the array will go inside the brackets',
+        example: 'let myArray = ["stars", 4, "nunchucks", false]. To add "ninjas" to myArray, we would write myArray.push("ninjas")',
+        question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you add "Hazel" to the ninjas array?',
+        answers: ['push("Hazel").ninjas, ninjapush("Hazel"), "Hazel" = ninjas, ninjas.push("Hazel")'],
+        correct: 'ninjas.push("Hazel")',
+        level: 4,
+        questionNumber: 4
+    },
 ];
