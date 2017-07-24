@@ -161,7 +161,7 @@ module.exports = [
         questionNumber: 0
     },
     {
-        title: 'Else Statments',
+        title: 'If Else Statments',
         background: 'With else statments we can choose what to do when the if condition isn\'t met',
         example: 'if (enemyChoice < 3) { enemyChoice = nunchucks } else { enemyChoice = origami }',
         question: 'Which statement would make the enemy choose a shuriken when they have a value of 16?',
@@ -172,14 +172,58 @@ module.exports = [
         questionNumber: 1
     },
     {
-        title: 'Else Statments',
-        background: 'With else statments we can choose what to do when the if condition isn\'t met',
-        example: 'if (enemyChoice < 3) { enemyChoice = nunchucks } else { enemyChoice = origami }',
-        question: 'Which statement would make the enemy choose a shuriken when they have a value of 16?',
-        answers: ['if (enemyChoice < 3) { enemyChoice = shuriken } else { enemyChoice = origami }', 'if (enemyChoice > 9) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 
+        title: 'If Else Statments',
+        background: 'Let\'s try another If Else Statement',
+        example: 'if (enemyChoice > 6) { enemyChoice = nunchucks } else { enemyChoice = origami }',
+        question: 'Which statement would make the enemy choose origami when they have a value of 4?',
+        answers: ['if (enemyChoice > 5) { enemyChoice = shuriken } else { enemyChoice = origami }', 'if (enemyChoice > 9) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 
                 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }', 'if (enemyChoice <= 15) { enemyChoice = shuriken } else { enemyChoice = origami }'],
-        correct: 'if (enemyChoice < 15) { enemyChoice = nunchucks } else { enemyChoice = shuriken }',
+        correct: 'if (enemyChoice > 5) { enemyChoice = shuriken } else { enemyChoice = origami }',
         level: 3,
         questionNumber: 2
+    },
+    {
+        title: 'If Else Statments',
+        background: 'Let\'s try another If Else Statement',
+        example: 'if (enemyChoice = true) { enemyChoice = nunchucks } else { enemyChoice = origami }',
+        question: 'Which statement would make you a ninja?',
+        answers: ['if (ninjaLevel = true) { status = ninja } else { status = ninjaInTraining }', 'if (ninjaLevel = false) { status = ninja } else { status = ninjaInTraining }', 
+                'if (ninjaLevel = true) { status = ninjaInTraining } else { status = ninja }', 'if (ninjaLevel = false) { status is ninja } else { status is not a ninja }'],
+        correct: 'if (ninjaLevel = true) { status = ninja } else { status = ninjaInTraining }',
+        level: 3,
+        questionNumber: 3
+    },
+    {
+        title: 'If Else Statments',
+        background: 'If Else statements can be linked so that you can give your program more outcomes',
+        example: 'if (ninjaLevel = "Academy") { colour = "white" } else if ( ninjaLevel = "Gennin" ) { colour = "Yellow" } else if ( ninjaLevel = "Chunnin" ) { colour = "Orange" } else { colour = "Working towards black belt" }',
+        question: 'How would we get a tiny clan if there are fewer than 5 ninjas, a small clan if there are less than 10 ninjas, a medium clan if there are fewer than 15 ninjas and a large ninja if there are more?',
+        answers: ['if (ninjaNum < 5) { clan = "tiny" } else if ( ninjaNum < 10 ) { clan = "small" } else if ( ninjaNum < 15 ) { clan = "medium" } else { clan = "large" }', 
+        'if (ninjaNum = 2) { clan = "tiny" } else if ( ninjaNum < 8 ) { clan = "small" } else if ( ninjaNum < 12 ) { clan = "medium" } else { clan = "large" }',
+        'if (ninjaNum > 10) { clan = "tiny" } else if ( ninjaNum < 18 ) { clan = "small" } else if ( ninjaNum < 12 ) { clan = "medium" } else { clan = "massive" }',
+        'if (ninjaNum = 12) { clan = "tiny" } else if ( ninjaNum < 10 ) { clan = "small" } else if ( ninjaNum < 19 ) { clan = "medium" } else { clan = "large" }',],
+        correct: 'if (ninjaNum < 5) { clan = "tiny" } else if ( ninjaNum < 10 ) { clan = "small" } else if ( ninjaNum < 15 ) { clan = "medium" } else { clan = "large"}',
+        level: 3,
+        questionNumber: 4
+    },
+    {
+        title: 'Arrays',
+        background: 'An Array is a like making a list. We can put anything we want in arrays. We need to start an array with [, end an array with ], then separate the items with commas',
+        example: 'let myArray = ["stars", 4, "nunchucks", false]',
+        question: 'How would you make an array with Academy, 15 and true?',
+        answers: ['let myArray = "Academy", 4, "nunchuck", false, let myArray = ["Academy", 4, "nunchuck", false], let myArray = ["Academy" 4 "nunchuck" false], let myArray = "Academy" 4 "nunchuck" false'],
+        correct: 'let myArray = ["Academy", 4, "nunchuck", false]',
+        level: 4,
+        questionNumber: 0
+    },
+    {
+        title: 'Array Indexes',
+        background: 'An Array is a list. The order matters, but how can we get the first, second, third etc item. In JS, we start counting from 0',
+        example: 'let myArray = ["stars", 4, "nunchucks", false], myArray[0] would give you stars, myArray[1] would give you 4, myArray[2] would give you nunchucks, myArray[3] would give you false',
+        question: 'let yourArray = ["stealth", "invisible", 20] How would you get the word "invisible" from yourArray?',
+        answers: ['yourArray[0], yourArray[1], yourArray[2], yourArray[invisible]'],
+        correct: 'yourArray[1]',
+        level: 4,
+        questionNumber: 1
     },
 ];
