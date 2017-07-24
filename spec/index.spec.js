@@ -91,7 +91,7 @@ describe('GET /api/levels/:level', function () {
 describe('GET /api/levels/:level/:question', function () {
   it('should return the requested questions', function (done) {
     request(server)
-      .get('/api/levels/1/1')
+      .get('/api/levels/0/0')
       .end((err, res) => {
         console.log(res.body);
         if (err) done(err);
