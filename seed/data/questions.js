@@ -256,4 +256,54 @@ module.exports = [
         level: 4,
         questionNumber: 4
     },
+    {
+        title: 'Removing things from an array',
+        background: 'In the last question we learnt about adding items to the end of an array by using push(). Now we are going to remove the last item using pop()',
+        example: 'let myArray = ["stars", 4, "nunchucks", false]. To remove false from myArray, we would write myArray.pop()',
+        question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you remove "Sophie" from the ninjas array?',
+        answers: ['push("Sophie").ninjas, ninjapop("Sophie"), "Sophie" = ninjas, ninjas.pop()'],
+        correct: 'ninjas.pop()',
+        level: 5,
+        questionNumber: 0
+    },
+    {
+        title: 'Console.log',
+        background: 'We use console.log to show a result on the screen',
+        example: 'console.log("Well done Ninja") would output "Well done Ninja" on the screen / console',
+        question: 'How would you output "Keep Training"?',
+        answers: ['consoleLog("Keep Training"), console.bog("Keep Training"), "console.log("Keep Training"), console.dog("Keep Training")'],
+        correct: 'console.log("Keep Training")',
+        level: 5,
+        questionNumber: 1
+    },
+    {
+        title: 'Return',
+        background: 'A return statement sorts the value of a variable so that it can be reused later',
+        example: 'return 1 + 3',
+        question: 'What would the following return statement return? return 5 * 2',
+        answers: ['5, 2, 7, 10'],
+        correct: '10',
+        level: 5,
+        questionNumber: 2
+    },
+    {
+        title: 'Fun with Functions',
+        background: 'A function is a block of reusable code that , when called, perform tasks. Imagine a dog that does the same trick only when asked. Except you do not need dog treats to make your code perform. In programming, these code blocks are called functions.',
+        example: 'function myFunction() { console.log("this is a function") } This function would console log the string "this is a function"',
+        question: 'How would you create a function called welcomeNinja that puts "Hello Ninja" on the console?',
+        answers: ['function() {console.log("Hello Ninja")}, function welcomeNinja() {console.log("Hello Ninja")}, welcomeNinja() {console.log("Hello Ninja")}, function(welcomeNinja) {console.log("Hello Ninja")}'],
+        correct: 'function welcomeNinja() {console.log("Hello Ninja")}',
+        level: 5,
+        questionNumber: 3
+    },
+    {
+        title: 'More Fun With Functions',
+        background: 'There are many ways to use functions, but here we are going to practice returnining from one',
+        example: 'function myFunction() { return "this is a function" } This function would always return the string "this is a function"',
+        question: 'How would you create a function called enemyApproaching that returns "Ninja attack"?',
+        answers: ['function() {return("Hello Ninja")}, function enemyApproaching() {return "Ninja attack"}, welcomeNinja() {return "Hello Ninja"}, function(enemyApproaching) {console.log "Ninja Attack"}'],
+        correct: 'function enemyApproaching() {return "Ninja attack"}',
+        level: 5,
+        questionNumber: 4
+    },
 ];
