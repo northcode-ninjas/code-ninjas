@@ -3,7 +3,7 @@ const {Questions} = require('../models/models');
 
 router.get('/:level/questions', (req, res, next) => {
     const {level} = req.params;
-    Questions.find({level})
+    Questions.find({level}).sort('questionNumber')
     .then((questions) => {
         return res.status(200).json({questions});
     })

@@ -82,6 +82,7 @@ describe('GET /api/levels/:level/questions', function () {
         expect(res.statusCode).to.equal(200);
         expect(res.body.questions).to.be.an('array');
         expect(res.body.questions.length).to.equal(5);
+        expect(res.body.questions[0].questionNumber).to.equal(0);
         done();
       }
     });
