@@ -298,12 +298,62 @@ module.exports = [
     },
     {
         title: 'More Fun With Functions',
-        background: 'There are many ways to use functions, but here we are going to practice returnining from one',
+        background: 'There are many ways to use functions, but here we are going to practice returning from one',
         example: 'function myFunction() { return "this is a function" } This function would always return the string "this is a function"',
         question: 'How would you create a function called enemyApproaching that returns "Ninja attack"?',
         answers: ['function() {return("Hello Ninja")}, function enemyApproaching() {return "Ninja attack"}, welcomeNinja() {return "Hello Ninja"}, function(enemyApproaching) {console.log "Ninja Attack"}'],
         correct: 'function enemyApproaching() {return "Ninja attack"}',
         level: 5,
+        questionNumber: 4
+    },
+    {
+        title: 'Parameters',
+        background: 'Parameters are variables in a functions brackets',
+        example: 'function myFunction(parameter1, parameter2) { console.log(parameter1, parameter2) } This function would console log parameter1 and parameter2',
+        question: 'Which function would return "Hello" and "Ninja"?',
+        answers: ['function("Hello", "Ninja") {return("Hello Ninja")}, function welcomeNinja() {return "Hello""Ninja"}, function welcomeNinja("Hello", "Ninja") {return "Hello" "Ninja"}, function(enemyApproaching) {console.log "Hello" "Ninja"}'],
+        correct: 'function welcomeNinja("Hello", "Ninja") {return "Hello" "Ninja"}',
+        level: 6,
+        questionNumber: 0
+    },
+    {
+        title: 'Invoking a function',
+        background: 'To get a result from a function we first need to "call" or "invoke" a function, eg welcome("Ninja"). We write the function name, then put our arguments in the functions bracket. ',
+        example: 'function myName(name) {console.log(name)} myName("loneninja") would print out "loneninja"',
+        question: 'function myNinja(name) {console.log(name)}. How would we invoke myNinja function with the name "Kai"',
+        answers: ['myNinja=Kai, myNinja[kai], myNinja("Kai"), Kai is myNinja'],
+        correct: 'myNinja("Kai")',
+        level: 6,
+        questionNumber: 1
+    },
+    {
+        title: 'Functions with maths',
+        background: 'We can use function to do maths',
+        example: 'function myAddition(a, b) {console.log(a + b)} We can now put any numbers instead of a and b. To get the result we would call the function with our numbers like this: myAddition(12, 5) prints out 17',
+        question: 'function myAddingFunction(a, b) {console.log(a + b)} How would we invoke myAddingFunction to give 20',
+        answers: ['myAddingFunction=(10, 10), myAddingFunction[20], 20 is myAddingFunction, myAddingFunction(15, 5)'],
+        correct: 'myAddingFunction(15, 5)',
+        level: 6,
+        questionNumber: 2
+    },
+    {
+        title: 'Functions with maths II',
+        background: 'We can use function to do more maths',
+        example: 'function myDivision(a, b) {console.log(a / b)} myDivision(12, 3) would print out the number 4',
+        question: 'function myMultiplication(a, b) {console.log(a * b)} How would we invoke myMultiplication to give 36',
+        answers: ['myMultiplication(9, 4), myMultiplication=(9, 4), myMultiplication[36], 36 is myMultiplication'],
+        correct: 'myMultiplication(9, 4)',
+        level: 6,
+        questionNumber: 3
+    },
+    {
+        title: 'Functions with maths III',
+        background: 'We can use function to do even more maths',
+        example: 'function mySubtraction(a, b) {console.log(a - b)} myRemainder(12, 5) would print out the number 7',
+        question: 'function mySubtraction(a, b) {console.log(a * b)} How would we invoke mySubtraction to give 10',
+        answers: ['mySubtraction(12, 2), mySubtraction=(12, 4), mySubtraction[10], 10 is mySubtraction'],
+        correct: 'mySubtraction(12, 2)',
+        level: 6,
         questionNumber: 4
     },
 ];
