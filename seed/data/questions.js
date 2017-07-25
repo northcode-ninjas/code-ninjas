@@ -406,4 +406,55 @@ module.exports = [
         level: 7,
         questionNumber: 4
     },
+    {
+        title: 'Recap Round',
+        background: 'Now you have almost completed all of your training it\'s time to recap what we\'ve learnt so far. Let\'s start with a Integer',
+        example: 'Think back to the Academy',
+        question: 'Identify the Integer',
+        answers: ['"true"','"integer"', '"Ninjas"', 25],
+        correct: 25,
+        level: 8,
+        questionNumber: 0
+    },
+    {
+        title: 'Recap Round',
+        background: 'Now it\'s time for variables',
+        example: 'Remember when you were a gennin',
+        question: 'Select the variable called codeNinja that has the string value of master',
+        answers: ['let codeninja = master, Codeninja = "master", master = "codeNinja", let codeNinja = "master"'],
+        correct: 'let codeNinja = "master"',
+        level: 8,
+        questionNumber: 1
+    },
+    {
+        title: 'Recap Round',
+        background: 'Do you remember the less than operator?',
+        example: 'Even Chunnins can do this',
+        question: 'Which statement would show that there are less than 7 nunchucks?',
+        answers: ['let nunchucks = Math.random()', 'nunchucks > 10', 'nunchucks = 7', 'nunchucks < 7'],
+        correct: 'nunchucks < 7',
+        level: 8,
+        questionNumber: 2
+    },
+    {
+        title: 'Recap Round',
+        background: 'Can we cast your mind back to If Else Statements?',
+        example: 'Back when you were a Jounin this was easy',
+        question: 'Which statement would make ninjaChoice be shuriken when they have a value of 7?',
+        answers: ['if (ninjaChoice > 5) { ninjaChoice = shuriken } else { enemyChoice = origami }', 'if (ninjaChoice > 9) { ninjaChoice = nunchucks } else { ninjaChoice = shuriken }', 
+                'if (ninjaChoice < 15) { ninjaChoice = nunchucks } else { ninjaChoice = shuriken }', 'if (ninjaChoice <= 15) { ninjaChoice = nunchucks } else { ninjaChoice = origami }'],
+        correct: 'if (ninjaChoice > 9) { ninjaChoice = nunchucks } else { ninjaChoice = shuriken }',
+        level: 8,
+        questionNumber: 3
+    },
+    {
+        title: 'Recap Round',
+        background: 'Arrays',
+        example: 'You smashed this as a Special Jounin',
+        question: 'How would you make an array with Ninja, 5 and false?',
+        answers: ['let myArray = "Ninja", 5, false, let myArray = ["Ninja", 5, false], let myArray = ["Ninja" 5 false], let myArray = "Ninja" 5 false'],
+        correct: 'let myArray = ["Ninja", 5, false]',
+        level: 8,
+        questionNumber: 4
+    },
 ];
