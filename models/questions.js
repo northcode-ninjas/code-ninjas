@@ -7,7 +7,7 @@ let QuestionSchema = new Schema({
     example: String,
     question: String,
     answers: [],
-    correct: String,
+    correct: Schema.Types.Mixed,
     level: Number,
     questionNumber : Number
 });
