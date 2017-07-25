@@ -356,4 +356,54 @@ module.exports = [
         level: 6,
         questionNumber: 4
     },
+    {
+        title: 'Going Loopy for "for loops"',
+        background: 'A loop can repeat a section of your code, however many times you like. There are different for loops and while loops, but here, we will look at for loops.',
+        example: 'for(let start = 0; start < 10; start +1){what you want to happen here} This for loop would start at 0 and go up in one\'s to 9',
+        question: 'How would you go up in steps of 2?',
+        answers: ['start+1', 'start2+', 'start +2', 'start++'],
+        correct: 'start +2',
+        level: 7,
+        questionNumber: 0
+    },
+    {
+        title: 'Backward loops',
+        background: 'We can also use loops to go backwards',
+        example: 'for(let end = 10; end > 0; end -1){what you want to happen here} This for loop would start at 10 and go down in one\'s to 0',
+        question: 'How would you go down in steps of 2?',
+        answers: ['end-1', 'end2-', 'end -2', 'end++'],
+        correct: 'end -2',
+        level: 7,
+        questionNumber: 1
+    },
+    {
+        title: 'More "for loops"',
+        background: 'If we want to change every item in an array, we can use a for loop to do this',
+        example: 'let myArray = [1, 2, 3, 4, 5] for(let i = 0; i < myArray.length; i++){console.log(myArray[i] + 2)} This for loop would add 2 to every number in myArray to give [3, 4, 5, 6, 7]',
+        question: 'let myArray = [1, 2, 3, 4, 5] How would we multiply each number by 2?',
+        answers: ['for(let i = 0; i < myArray.length; i++){console.log(myArray[i] * 2)}', 'for(let i = 0; i < myArray.length; i++){console.log(myArray[i] x 2)}', 'for(let i = 0; i < myArray.length; i++){console.log(myArray[i] + 2)}', 'for(let i = 0; i < myArray.length; i++){console.log(myArray[i] - 2)}'],
+        correct: 'for(let i = 0; i < myArray.length; i++){console.log(myArray[i] * 2)}',
+        level: 7,
+        questionNumber: 2
+    },
+    {
+        title: 'While loops',
+        background: 'The while loop loops through a block of code as long as a specified condition is true.',
+        example: 'while (true) {console.log(\'Hello, world!\');}, this would print out "Hello World" if whatever is inside the brackets is true',
+        question: 'How would you make a while loop print the numbers 1 to 5?',
+        answers: ['i = 0; while(i < 5) {i++; console.log(i);}', 'i = 0; while(i < 4) {i++; console.log(i);}', 'i = 0; while(i < 6) {i++; console.log(i);}', 'i = 1; while(i < 5) {i++; console.log(i);}'],
+        correct: 'i = 0; while(i < 5) {i++; console.log(i);}',
+        level: 7,
+        questionNumber: 3
+    },
+    {
+        title: 'Do While Loop',
+        background: 'The Do While Loop is like the while loop except that it will definitely run through your code once.',
+        example: 'let result = \'\'; let i = 0; do{i +=1; result += i + \' \';} while (i < 5); This prints out the numbers 1 2 3 4 5',
+        question: 'What would this do while loop print out? do {text += "The number is " + i; i++} while( i < 3);',
+        answers: ['The number is 0, The number is 1, The number is 2', 'The number is 1, The number is 2, The number is 3', 'The number is 0, The number is 1', 'The number is 1, The number is 2'],
+        correct: 'The number is 0, The number is 1, The number is 2',
+        level: 7,
+        questionNumber: 4
+    },
 ];
