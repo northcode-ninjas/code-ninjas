@@ -4,28 +4,28 @@ module.exports = [
         background: 'In JavaScript we would call a sentence or word a "string". Strings are made by putting single or double quotes around characters',
         example: '"I am a string", \'I am also a string\', I am not a string ',
         question: 'Find the string',
-        answers: ['"Ninjas"', 34, true, 'name'],
+        answers: ['"Ninjas"', 34, 'true', 'name'],
         correct: '"Ninjas"',
         level: 0,
         questionNumber: 0
     },
     {
-        title: 'What\'s A Integer?',
+        title: 'What\'s An Integer?',
         background: 'In JavaScript Integers are whole numbers',
         example: ' 1 2 3 4 5 ',
         question: 'Choose the number',
-        answers: ['"Ninjas"', 34, true, 'name'],
+        answers: ['"Ninjas"', 34, 'true', 'name'],
         correct: 34,
         level: 0,
         questionNumber: 1
     },
     {
-        title: 'What\'s a Boolean?',
+        title: 'What\'s A Boolean?',
         background: 'A Boolean is a value of either true or false',
         example: 'true and false are both booleans',
         question: 'Choose the boolean',
-        answers: ['"Ninjas"', 34, true, 'name'],
-        correct: true,
+        answers: ['"Ninjas"', 34, 'true', 'name'],
+        correct: 'true',
         level: 0,
         questionNumber: 2
         
@@ -46,7 +46,7 @@ module.exports = [
         example: 'karateChop, myBirthday, masterOfInvisibility',
         question: 'Which of the following is camelCase',
         answers: ['Shadowhunter', 'ShadowWarrior', 'nightWarrior', 'mastersamurai'],
-        correct: '"nightWarrior"',
+        correct: 'nightWarrior',
         level: 0,
         questionNumber: 4
     },
