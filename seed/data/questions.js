@@ -208,7 +208,7 @@ module.exports = [
     },
     {
         title: 'Arrays',
-        background: 'An Array is a like making a list. We can put anything we want in arrays. We need to start an array with [, end an array with ], then separate the items with commas',
+        background: 'In JavaScript, we call a list an array. We start an array with [, end it with ], and separate the items inside the array with commas.',
         example: 'let myArray = ["stars", 4, "nunchucks", false]',
         question: 'How would you make an array with Academy, 15 and true?',
         answers: ['let myArray = "Academy", 4, "nunchuck", false, let myArray = ["Academy", 4, "nunchuck", false], let myArray = ["Academy" 4 "nunchuck" false], let myArray = "Academy" 4 "nunchuck" false'],
@@ -217,9 +217,9 @@ module.exports = [
         questionNumber: 0
     },
     {
-        title: 'Array Indexes',
-        background: 'An Array is a list. The order matters, but how can we get the first, second, third etc item. In JS, we start counting from 0',
-        example: 'let myArray = ["stars", 4, "nunchucks", false], myArray[0] would give you stars, myArray[1] would give you 4, myArray[2] would give you nunchucks, myArray[3] would give you false',
+        title: 'Array indexes',
+        background: 'We have learned that an array is a list. The order of our list is important. We can find each item in our array by asking for the number of the item, but be careful! JavaScript doesn\'t start counting at 1 - it starts counting at 0. Instead of 1, 2, 3, 4, 5, we say 0, 1, 2, 3, 4.',
+        example: 'let myArray = ["stars", 4, "nunchucks", false], myArray[0] is stars, myArray[1] is 4, myArray[2] is nunchucks, and myArray[3] is false.',
         question: 'let yourArray = ["stealth", "invisible", 20] How would you get the word "invisible" from yourArray?',
         answers: ['yourArray[0], yourArray[1], yourArray[2], yourArray[invisible]'],
         correct: 'yourArray[1]',
@@ -227,9 +227,9 @@ module.exports = [
         questionNumber: 1
     },
     {
-        title: 'Changing Data with Array Indexes',
-        background: 'So now that you know that we start counting from 0, we can use this to change data in our arrays',
-        example: 'let myInfo = [1, 2, 3, 4, 5]. If we wanted to change 1 to 21, we would write myInfo[0] = 21, myInfo would now equal [21, 2, 3, 4, 5].',
+        title: 'Changing data by using array indexes',
+        background: 'We have learned that JavaScript starts counting from 0, and that we can find items in arrays by asking the array for the number of the item. We can use this to change the items in our arrays too.',
+        example: 'Look at this array: \'let myInfo = [1, 2, 3, 4, 5]\'. If we wanted to change 1 to 21, we would write myInfo[0] = 21. Now we have \'myInfo = [21, 2, 3, 4, 5]\'.',
         question: 'let training = ["camouflage yourself", "practice jumping", "learn sparring", "eat healthily"] How would you change the word "eat healthily" to "climb trees"?',
         answers: ['training[0] = "climb trees", training[1] = "climb trees", training[2] = "climb trees", training[3] = "climb trees"'],
         correct: 'training[3] = "climb trees"',
@@ -237,19 +237,19 @@ module.exports = [
         questionNumber: 2
     },
     {
-        title: 'Array Length',
-        background: 'We can see how many items there are inside an array by using .length',
+        title: 'Array length',
+        background: 'In JavaScript, we can see how many items there are inside an array by using \'.length\'.',
         example: 'let myArray = ["stars", 4, "nunchucks", false]. To see how long the myArray array is we can use myArray.length which would give us 4.',
-        question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you find the length of an array?',
+        question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you find the length of this array?',
         answers: ['ninjaslength, let ninjas.length, ninjas.length, length.ninjas'],
         correct: 'ninjas.length',
         level: 4,
         questionNumber: 3
     },
     {
-        title: 'Adding to an array',
-        background: 'We can add items to the end of an array by using a method called push(). Whatever we want to add to the array will go inside the brackets',
-        example: 'let myArray = ["stars", 4, "nunchucks", false]. To add "ninjas" to myArray, we would write myArray.push("ninjas")',
+        title: 'Adding items to an array',
+        background: 'In JavaScript, we can add items to the end of an array by using \'.push()\'. Whatever we want to add to the array will go inside ().',
+        example: '\'let myArray = ["stars", 4, "nunchucks", false]\' To add "ninjas" to myArray, we write \'myArray.push("ninjas")\'.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you add "Hazel" to the ninjas array?',
         answers: ['push("Hazel").ninjas, ninjapush("Hazel"), "Hazel" = ninjas, ninjas.push("Hazel")'],
         correct: 'ninjas.push("Hazel")',
@@ -257,9 +257,9 @@ module.exports = [
         questionNumber: 4
     },
     {
-        title: 'Removing things from an array',
-        background: 'In the last question we learnt about adding items to the end of an array by using push(). Now we are going to remove the last item using pop()',
-        example: 'let myArray = ["stars", 4, "nunchucks", false]. To remove false from myArray, we would write myArray.pop()',
+        title: 'Removing items from an array',
+        background: 'We have learned how to add items to the end of an array by using \'.push()\'. Now we are going to remove the last item from the array, using \'.pop()\'. Nothing needs to go inside () this time. \'.pop()\' knows it just needs to remove whatever the last item of the array is.',
+        example: '\'let myArray = ["stars", 4, "nunchucks", false]\' To remove false from myArray, we would write \'myArray.pop()\'.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you remove "Sophie" from the ninjas array?',
         answers: ['push("Sophie").ninjas, ninjapop("Sophie"), "Sophie" = ninjas, ninjas.pop()'],
         correct: 'ninjas.pop()',
