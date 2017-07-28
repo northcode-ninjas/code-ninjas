@@ -271,7 +271,7 @@ module.exports = [
         background: 'In JavaScript, we use \'console.log\' to send messages to our browser\'s console. This can be a really useful tool for code ninjas!',
         example: 'console.log("Well done Ninja") would write the message "Well done Ninja" in the console.',
         question: 'How would you output "Keep Training"?',
-        answers: ['consoleLog("Keep Training")', 'console.bog("Keep Training")', '"console.log("Keep Training")', 'console.dog("Keep Training")'],
+        answers: ['consoleLog("Keep Training")', 'console.bog("Keep Training")', 'console.log("Keep Training")', 'console.dog("Keep Training")'],
         correct: 'console.log("Keep Training")',
         level: 5,
         questionNumber: 1
