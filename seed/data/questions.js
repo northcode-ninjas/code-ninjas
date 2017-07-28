@@ -113,7 +113,7 @@ module.exports = [
     {
         title: 'Greater than',
         background: 'In JavaScript, we can use the greater than sign - > - to show that a variable is more than another number.',
-        example: 'If we had more than 7 sensi, we would write \'sensi > 7\'.',
+        example: 'If we had more than 7 sensei, we would write \'sensei > 7\'.',
         question: 'Which statement would show that there are more than 7 shuriken?',
         answers: ['let shuriken = 2 > 5', 'shuriken > 10', 'shuriken > 7', 'shuriken = 8'],
         correct: 'shuriken > 7',
@@ -144,9 +144,9 @@ module.exports = [
         title: 'AND and OR signs',
         background: 'In JavaScript, we use the AND sign && if both pieces of information are correct. We also use the OR sign || if just one of the two pieces of information is correct.',
         example: 'Using the AND sign in (12 > 10 && (10 / 2) === 5) is correct, because both maths sentences in this line of code are correct. Using the OR sign in (7 === 5 || (5 * 2) === 10) is correct, because only one of these maths sentences is correct.',
-        question: 'Which line of code shows that either ninjas or sensi is equal to 20?',
-        answers: ['(ninjas === 20 && sensi === 20)','(ninjas === 25 || sensi === 20)', '(ninjas === 20 || sensi === 20)', '(ninjas === 20 || sensi === 25)'],
-        correct: '(ninjas === 20 || sensi === 20)',
+        question: 'Which line of code shows that either ninjas or sensei is equal to 20?',
+        answers: ['(ninjas === 20 && sensei === 20)','(ninjas === 25 || sensei === 20)', '(ninjas === 20 || sensei === 20)', '(ninjas === 20 || sensei === 25)'],
+        correct: '(ninjas === 20 || sensei === 20)',
         level: 2,
         questionNumber: 4
     },
