@@ -251,7 +251,7 @@ module.exports = [
         background: 'In JavaScript, we can add items to the end of an array by using \'.push()\'. Whatever we want to add to the array will go inside ().',
         example: '\'let myArray = ["stars", 4, "nunchucks", false]\' To add "ninjas" to myArray, we write \'myArray.push("ninjas")\'.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you add "Hazel" to the ninjas array?',
-        answers: ['push("Hazel").ninjas', 'ninjapush("Hazel")', '"Hazel" = ninjas, ninjas.push("Hazel")'],
+        answers: ['push("Hazel").ninjas', 'ninjapush("Hazel")', '"Hazel" = ninjas', 'ninjas.push("Hazel")'],
         correct: 'ninjas.push("Hazel")',
         level: 4,
         questionNumber: 4
@@ -261,7 +261,7 @@ module.exports = [
         background: 'We have learned how to add items to the end of an array by using \'.push()\'. Now we are going to remove the last item from the array, using \'.pop()\'. Nothing needs to go inside () this time. \'.pop()\' knows it just needs to remove whatever the last item of the array is.',
         example: '\'let myArray = ["stars", 4, "nunchucks", false]\' To remove false from myArray, we would write \'myArray.pop()\'.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you remove "Sophie" from the ninjas array?',
-        answers: ['push("Sophie").ninjas', 'ninjapop("Sophie")', '"Sophie" = ninjas, ninjas.pop()'],
+        answers: ['push("Sophie").ninjas', 'ninjapop("Sophie")', '"Sophie" = ninjas', 'ninjas.pop()'],
         correct: 'ninjas.pop()',
         level: 5,
         questionNumber: 0
