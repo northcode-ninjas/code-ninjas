@@ -124,9 +124,9 @@ module.exports = [
         title: '...or equal to',
         background: 'In JavaScript, we can use <= to show that a variable is either less than or equal to another number. Also, we can use >= to show that a variable is either greater than or equal to another number.',
         example: 'If we have six or less lotus flowers, we write \'lotusFlowers >= 6\'. If we have at least twelve katana, we write \'katana <= 12\'.',
-        question: 'Select the answer that shows the 20 is less than or equal to 10?',
-        answers: ['20 <= 10', '10 < 20', '10 <= 20', '20 > 10'],
-        correct: '10 <= 20',
+        question: 'Select the answer that shows that a is greater than or equal to b?',
+        answers: ['a >= b', 'a < b', 'a <= b', 'a > b'],
+        correct: 'a >= b',
         level: 2,
         questionNumber: 2
     },
@@ -221,7 +221,7 @@ module.exports = [
         background: 'We have learned that an array is a list. The order of our list is important. We can find each item in our array by asking for the number of the item, but be careful! JavaScript doesn\'t start counting at 1 - it starts counting at 0. Instead of 1, 2, 3, 4, 5, we say 0, 1, 2, 3, 4.',
         example: 'let myArray = ["stars", 4, "nunchucks", false], myArray[0] is stars, myArray[1] is 4, myArray[2] is nunchucks, and myArray[3] is false.',
         question: 'let yourArray = ["stealth", "invisible", 20] How would you get the word "invisible" from yourArray?',
-        answers: ['yourArray[0], yourArray[1], yourArray[2], yourArray[invisible]'],
+        answers: ['yourArray[0]', 'yourArray[1]', 'yourArray[2]', 'yourArray[invisible]'],
         correct: 'yourArray[1]',
         level: 4,
         questionNumber: 1
@@ -231,7 +231,7 @@ module.exports = [
         background: 'We have learned that JavaScript starts counting from 0, and that we can find items in arrays by asking the array for the number of the item. We can use this to change the items in our arrays too.',
         example: 'Look at this array: \'let myInfo = [1, 2, 3, 4, 5]\'. If we wanted to change 1 to 21, we would write myInfo[0] = 21. Now we have \'myInfo = [21, 2, 3, 4, 5]\'.',
         question: 'let training = ["camouflage yourself", "practice jumping", "learn sparring", "eat healthily"] How would you change the word "eat healthily" to "climb trees"?',
-        answers: ['training[0] = "climb trees", training[1] = "climb trees", training[2] = "climb trees", training[3] = "climb trees"'],
+        answers: ['training[0] = "climb trees"', 'training[1] = "climb trees"', 'training[2] = "climb trees"', 'training[3] = "climb trees"'],
         correct: 'training[3] = "climb trees"',
         level: 4,
         questionNumber: 2
@@ -241,7 +241,7 @@ module.exports = [
         background: 'In JavaScript, we can see how many items there are inside an array by using \'.length\'.',
         example: 'let myArray = ["stars", 4, "nunchucks", false]. To see how long the myArray array is we can use myArray.length which would give us 4.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you find the length of this array?',
-        answers: ['ninjaslength, let ninjas.length, ninjas.length, length.ninjas'],
+        answers: ['ninjaslength', 'let ninjas.length', 'ninjas.length', 'length.ninjas'],
         correct: 'ninjas.length',
         level: 4,
         questionNumber: 3
@@ -251,7 +251,7 @@ module.exports = [
         background: 'In JavaScript, we can add items to the end of an array by using \'.push()\'. Whatever we want to add to the array will go inside ().',
         example: '\'let myArray = ["stars", 4, "nunchucks", false]\' To add "ninjas" to myArray, we write \'myArray.push("ninjas")\'.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you add "Hazel" to the ninjas array?',
-        answers: ['push("Hazel").ninjas, ninjapush("Hazel"), "Hazel" = ninjas, ninjas.push("Hazel")'],
+        answers: ['push("Hazel").ninjas', 'ninjapush("Hazel")', '"Hazel" = ninjas, ninjas.push("Hazel")'],
         correct: 'ninjas.push("Hazel")',
         level: 4,
         questionNumber: 4
@@ -261,7 +261,7 @@ module.exports = [
         background: 'We have learned how to add items to the end of an array by using \'.push()\'. Now we are going to remove the last item from the array, using \'.pop()\'. Nothing needs to go inside () this time. \'.pop()\' knows it just needs to remove whatever the last item of the array is.',
         example: '\'let myArray = ["stars", 4, "nunchucks", false]\' To remove false from myArray, we would write \'myArray.pop()\'.',
         question: 'let ninjas = ["Harry", "Larry", "Curly", "Mo", "Sophie"]. How would you remove "Sophie" from the ninjas array?',
-        answers: ['push("Sophie").ninjas, ninjapop("Sophie"), "Sophie" = ninjas, ninjas.pop()'],
+        answers: ['push("Sophie").ninjas', 'ninjapop("Sophie")', '"Sophie" = ninjas, ninjas.pop()'],
         correct: 'ninjas.pop()',
         level: 5,
         questionNumber: 0
@@ -271,7 +271,7 @@ module.exports = [
         background: 'In JavaScript, we use \'console.log\' to send messages to our browser\'s console. This can be a really useful tool for code ninjas!',
         example: 'console.log("Well done Ninja") would write the message "Well done Ninja" in the console.',
         question: 'How would you output "Keep Training"?',
-        answers: ['consoleLog("Keep Training"), console.bog("Keep Training"), "console.log("Keep Training"), console.dog("Keep Training")'],
+        answers: ['consoleLog("Keep Training")', 'console.bog("Keep Training")', '"console.log("Keep Training")', 'console.dog("Keep Training")'],
         correct: 'console.log("Keep Training")',
         level: 5,
         questionNumber: 1
@@ -281,7 +281,7 @@ module.exports = [
         background: 'In JavaScript, a return statement is used to end a block of code and give the result to the program.',
         example: '\'return 1 + 3\' would return 4 to the program.',
         question: 'What would \'return 5 * 2\' return to the program?',
-        answers: ['5, 2, 7, 10'],
+        answers: ['5', '2', '7', '10'],
         correct: '10',
         level: 5,
         questionNumber: 2
@@ -291,7 +291,7 @@ module.exports = [
         background: 'In JavaScript, a function is a block of code that makes something happen. Imagine that you ask your pet dog to sit, and she sits on the floor when you ask. But you don\'t need dog treats to make your code perform! You just give it a function to do instead.',
         example: 'function myFunction() { console.log("this is a function") } This function writes the string "this is a function" in the console.',
         question: 'How would you create a function called welcomeNinja that puts "Hello Ninja" on the console?',
-        answers: ['function() {console.log("Hello Ninja")}, function welcomeNinja() {console.log("Hello Ninja")}, welcomeNinja() {console.log("Hello Ninja")}, function(welcomeNinja) {console.log("Hello Ninja")}'],
+        answers: ['function() {console.log("Hello Ninja")}', 'function welcomeNinja() {console.log("Hello Ninja")}', 'welcomeNinja() {console.log("Hello Ninja")}', 'function(welcomeNinja) {console.log("Hello Ninja")}'],
         correct: 'function welcomeNinja() {console.log("Hello Ninja")}',
         level: 5,
         questionNumber: 3
@@ -301,7 +301,7 @@ module.exports = [
         background: 'There are many ways to use functions, but here we are going to practice using a return statement in a function.',
         example: 'function myFunction() { return "this is a function" } This function will return the string "this is a function".',
         question: 'How would you create a function called enemyApproaching that returns "Ninja attack"?',
-        answers: ['function() {return("Hello Ninja")}, function enemyApproaching() {return "Ninja attack"}, welcomeNinja() {return "Hello Ninja"}, function(enemyApproaching) {console.log "Ninja Attack"}'],
+        answers: ['function() {return("Hello Ninja")}', 'function enemyApproaching() {return "Ninja attack"}', 'welcomeNinja() {return "Hello Ninja"}', 'function(enemyApproaching) {console.log "Ninja Attack"}'],
         correct: 'function enemyApproaching() {return "Ninja attack"}',
         level: 5,
         questionNumber: 4
@@ -311,7 +311,7 @@ module.exports = [
         background: 'Do you see how we have () brackets after a function\'s name? That is where we place a function\'s parameters. Parameters are variables that we can give to the function.',
         example: 'function myFunction(parameter1, parameter2) { console.log(parameter1, parameter2) } This function would console log the values of parameter1 and parameter2.',
         question: 'Which function would return "Hello" and "Ninja"?',
-        answers: ['function("Hello", "Ninja") {return("Hello Ninja")}, function welcomeNinja() {return "Hello""Ninja"}, function welcomeNinja("Hello", "Ninja") {return "Hello" "Ninja"}, function(enemyApproaching) {console.log "Hello" "Ninja"}'],
+        answers: ['function("Hello", "Ninja") {return("Hello Ninja")}', 'function welcomeNinja() {return "Hello""Ninja"}', 'function welcomeNinja("Hello", "Ninja") {return "Hello" "Ninja"}', 'function(enemyApproaching) {console.log "Hello" "Ninja"}'],
         correct: 'function welcomeNinja("Hello", "Ninja") {return "Hello" "Ninja"}',
         level: 6,
         questionNumber: 0
@@ -321,7 +321,7 @@ module.exports = [
         background: 'In JavaScript, to get a result from a function, we first need to call the function, or ask it to work. We write the function\'s name, then we put our arguments in the () bracket after the function\'s name.',
         example: 'function myName(name) {console.log(name)} myName("loneninja") would print out "loneninja"',
         question: 'function myNinja(name) {console.log(name)}. How would we invoke myNinja function with the name "Kai"?',
-        answers: ['myNinja=Kai, myNinja[kai], myNinja("Kai"), Kai is myNinja'],
+        answers: ['myNinja=Kai', 'myNinja[kai]', 'myNinja("Kai")', 'Kai is myNinja'],
         correct: 'myNinja("Kai")',
         level: 6,
         questionNumber: 1
@@ -331,7 +331,7 @@ module.exports = [
         background: 'In JavaScript, we can use function to do maths too.',
         example: 'function myAddition(a, b) {console.log(a + b)} When we call this function, we give it two numbers inside the () brackets, like this: myAddition(12, 5). The function will add the numbers together for us, and return the number 17.',
         question: 'function myAddingFunction(a, b) {console.log(a + b)} How would we call myAddingFunction to return 20?',
-        answers: ['myAddingFunction=(10, 10), myAddingFunction[20], 20 is myAddingFunction, myAddingFunction(15, 5)'],
+        answers: ['myAddingFunction=(10, 10)', 'myAddingFunction[20]', '20 is myAddingFunction', 'myAddingFunction(15, 5)'],
         correct: 'myAddingFunction(15, 5)',
         level: 6,
         questionNumber: 2
@@ -341,7 +341,7 @@ module.exports = [
         background: 'Let\'s practice writing JavaScript functions with maths.',
         example: 'function myDivision(a, b) {console.log(a / b)} myDivision(12, 3) would return the number 4.',
         question: 'function myMultiplication(a, b) {console.log(a * b)} How would we call myMultiplication to return 36?',
-        answers: ['myMultiplication(9, 4), myMultiplication=(9, 4), myMultiplication[36], 36 is myMultiplication'],
+        answers: ['myMultiplication(9, 4)', 'myMultiplication=(9, 4)', 'myMultiplication[36]', '36 is myMultiplication'],
         correct: 'myMultiplication(9, 4)',
         level: 6,
         questionNumber: 3
@@ -351,7 +351,7 @@ module.exports = [
         background: 'Let\'s look at more JavaScript functions with maths.',
         example: 'function mySubtraction(a, b) {console.log(a - b)} myRemainder(12, 5) would return 7.',
         question: 'function mySubtraction(a, b) {console.log(a * b)} How would we call mySubtraction to return 10?',
-        answers: ['mySubtraction(12, 2), mySubtraction=(12, 4), mySubtraction[10], 10 is mySubtraction'],
+        answers: ['mySubtraction(12, 2)', 'mySubtraction=(12, 4)', 'mySubtraction[10]', '10 is mySubtraction'],
         correct: 'mySubtraction(12, 2)',
         level: 6,
         questionNumber: 4
@@ -421,7 +421,7 @@ module.exports = [
         background: 'Now it\'s time to look back at variables.',
         example: 'Remember your Gennin training!',
         question: 'Select the variable called codeNinja that has the string value of master',
-        answers: ['let codeninja = master, Codeninja = "master", master = "codeNinja", let codeNinja = "master"'],
+        answers: ['let codeninja = master', 'Codeninja = "master"', 'master = "codeNinja"', 'let codeNinja = "master"'],
         correct: 'let codeNinja = "master"',
         level: 8,
         questionNumber: 1
@@ -452,7 +452,7 @@ module.exports = [
         background: 'What do you remember about arrays?',
         example: 'Remember your Special Jounin training!',
         question: 'How would you make an array with Ninja, 5 and false?',
-        answers: ['let myArray = "Ninja", 5, false, let myArray = ["Ninja", 5, false], let myArray = ["Ninja" 5 false], let myArray = "Ninja" 5 false'],
+        answers: ['let myArray = "Ninja", 5, false', 'let myArray = ["Ninja", 5, false]', 'let myArray = ["Ninja" 5 false]', 'let myArray = "Ninja" 5 false'],
         correct: 'let myArray = ["Ninja", 5, false]',
         level: 8,
         questionNumber: 4
