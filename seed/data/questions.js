@@ -211,7 +211,7 @@ module.exports = [
         background: 'In JavaScript, we call a list an array. We start an array with [, end it with ], and separate the items inside the array with commas.',
         example: 'let myArray = ["stars", 4, "nunchucks", false]',
         question: 'How would you make an array with Academy, 15 and true?',
-        answers: ['let myArray = "Academy", 4, "nunchuck", false, let myArray = ["Academy", 4, "nunchuck", false], let myArray = ["Academy" 4 "nunchuck" false], let myArray = "Academy" 4 "nunchuck" false'],
+        answers: ['let myArray = "Academy", 4, "nunchuck", false', 'let myArray = ["Academy", 4, "nunchuck", false]', 'let myArray = ["Academy" 4 "nunchuck" false]', 'let myArray = "Academy" 4 "nunchuck" false'],
         correct: 'let myArray = ["Academy", 4, "nunchuck", false]',
         level: 4,
         questionNumber: 0
